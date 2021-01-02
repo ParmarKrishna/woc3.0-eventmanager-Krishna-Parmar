@@ -1,1 +1,1 @@
-# woc3.0-eventmanager-Krishna-Parmar
+# woc3.0-eventmanager
