@@ -28,8 +28,8 @@ def print_contacts(contacts):
     return 0
 
 if __name__=='__main__':
-    contacts={0:{'name':'krr','numbers':(202020,)},1:{'name':'koorr','numbers':(202020,3030,)}}
-    pk=2
+    contacts={}
+    pk=0
     do_other='Y'
     while do_other!='N':
         choice=input('"Add" to add contacts \n"Access" to access contacts\n"Print" to print database in sorted order \n Enter Here: ').lower()
