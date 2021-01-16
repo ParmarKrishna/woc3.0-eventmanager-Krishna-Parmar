@@ -1,0 +1,19 @@
+{% extends "./base.html" %}
+{% block content %}
+<span class="border">
+    <div class="shadow p-3 mb-5 bg-white rounded">
+        <h1> Hello!! This is Event Manager</h1>
+        <h2>About Event Manager</h2>
+        <ul>
+            <li>Host your event</li>
+            <li>Participate in event</li>
+            <li>Get your event's Participation List</li>
+            <li>All of this made easy</li>
+        </ul>
+        <a class="btn btn-dark btn-lg" role="button" href="{% url 'Event-Manager-Register-Event' %}">Host Event</a>
+        <a class="btn btn-dark btn-lg" role="button" href="{% url 'Event-Manager-Participant' %}">Participate in Event</a>
+        <a class="btn btn-dark btn-lg" role="button" href="{% url 'Event-Manager-getlist' %}">Get your participation list</a>
+        <a class="btn btn-dark btn-lg" role="button" href="{% url 'Event-Manager-eventslist' %}">See Active Events</a>
+    </div>
+</span>
+{% endblock content %}

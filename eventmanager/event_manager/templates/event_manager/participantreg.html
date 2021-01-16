@@ -1,0 +1,16 @@
+{% extends "./base.html" %}
+{% block content %}
+</style>
+<span class="border" style="margin-top: 180px;">
+    <div class="shadow p-3 mb-5 bg-white rounded">
+        <h2 style="margin-top: 20px;margin-bottom: 20px;">Participant Registration:</h2>
+        <p style="background:yellow;">Your Email ID and Mobile Number will recieve confirmation about your Registerations.</p>
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input class='btn btn-dark'type='submit' value="Register & host event"/> 
+            <a role="button" class="btn btn-danger" href="{% url 'Event-Manager-Home' %}">Go Back to Homepage</a>
+        </form>
+    </div>
+</span>
+{% endblock content %}
