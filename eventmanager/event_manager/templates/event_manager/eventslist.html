@@ -1,0 +1,17 @@
+{% extends "./base.html" %}
+{% load tz %}
+{% block content %}
+    {% for event in events %}
+        <article class="media content-section" style="background: white; margin-top: 20px;align-items: center;">
+            <div class="media-body">
+                <h2><a class="article-title" style="color: #444444;" href="#">{{ event.name }}</a></h2>
+                <h3 class="article-content">Event ID : {{ event.id }} </h3>
+                <p class="article-content">Description : {{ event.description }}</p>
+                <p class="article-content">From {{ event.From }} to {{ event.To }}</p>
+                <p class="article-content">Location :  {{ event.location }}</p>
+                <p class="article-content" style="color:red">Deadline to Register :  {{ event.deadline }}</p>
+                <a class="btn btn-dark" role="button" href="{% url 'Event-Manager-Participant' %}">Register for this event</a>
+            </div>
+        </article>
+    {% endfor %}
+{% endblock content %}

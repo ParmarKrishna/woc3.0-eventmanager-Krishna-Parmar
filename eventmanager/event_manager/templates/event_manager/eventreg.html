@@ -1,0 +1,34 @@
+{% extends "./base.html" %}
+{% block content %}
+    <span class="border" style="margin-top: 180px;">
+        {% ifequal k 1%}
+            <div class="alert alert-danger" role="alert">
+                <strong>OH NO!!</strong>This Email Address seems to be registered with another event, please use different Email Address
+            </div>
+        {% endifequal %}
+        <div class="shadow p-3 mb-5 bg-white rounded">
+            <h2 style="margin-top: 20px;margin-bottom: 20px;">Event Registration:</h2>
+            <p style="background:yellow;">Your Email ID and Mobile Number will recieve confirmation about your registered event details.</p>
+            {% if form.non_field_errors %}
+                <div class="alert alert-danger">
+                    {{form.error}}
+                </div>
+            {% endif %}
+            <form name="PForm" method="POST" onsubmit="return Validations()">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input class='btn btn-dark' type='submit' value="Register & host event"/> 
+                <a role="button" class="btn btn-danger" href="{% url 'Event-Manager-Home' %}">Go Back to Homepage</a>
+            </form>
+        </div>
+        <script>
+            function Validations(){
+                var mobileno=document.PForm.host_mobileno.value;
+                if(mobileno<=0){
+                    alert("You have entered wrong mobile number.")
+                }
+            }
+        </script>
+
+    </span>
+{% endblock content %}

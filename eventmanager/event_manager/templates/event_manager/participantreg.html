@@ -1,0 +1,72 @@
+{% extends "./base.html" %}
+{% block content %}
+</style>
+<span class="border" style="margin-top: 180px;">
+        {% ifequal reg 1%}
+            <div class="alert alert-danger" role="alert">
+                <strong>OH HEY!</strong>You Already have registered for this event.
+            </div>
+        {% endifequal %}
+    <div class="shadow p-3 mb-5 bg-white rounded">
+        <h2 style="margin-top: 20px;margin-bottom: 20px;">Participant Registration:</h2>
+        <p style="background:yellow;">Your Email ID and Mobile Number will recieve confirmation about your Registerations.</p>
+        <form name="myform" method="POST" action="{% url 'Event-Manager-Participant'  %}">
+            {% csrf_token %}
+            {% for event in events %}
+            <p>
+                <label style="display: inline-block;" for="id_eventId">Event ID:{{ event.id }}</label> 
+                <input type="radio" min="0" name="eventId" placeholder="Enter Event ID" value={{event.id}} required id="id_eventId" required>
+            </p>
+            {% endfor %}
+            <p>
+                <label for="id_participant_email">Email Address:</label>
+                <input type="email" name="participant_email" placeholder="Your Email Address" maxlength="254" required id="id_participant_email" required>
+            </p>
+            <p>
+                <label for="id_participant_name">Name:</label>
+                <input type="text" name="participant_name" placeholder="Your Name" maxlength="254" required id="id_participant_name" required>
+            </p>
+            <p>
+                <label for="id_participant_mobileno">Mobile Number:</label>
+                <input type="number" name="participant_mobileno" min="0" placeholder="Mobile Number" required id="id_participant_mobileno" required>
+            </p>
+            <p>
+                <label for="id_participant_type_0">Type of Participation:</label>
+                <label for="id_participant_type_0">
+                    <input type="radio" name="participant_type" value="Single" class="group-single" checked="checked" onClick="ShowGroupTile(0)" required id="id_participant_type_0" required> Single</label>
+                <label for="id_participant_type_1">
+                    <input type="radio" name="participant_type" value="Group" class="group-single" onClick="ShowGroupTile(1)" required id="id_participant_type_1" required> Group</label>
+            </p>
+            <p  style="display: none;" id="showit">
+                <label for="id_participant_total" id="something">Total Group Member:</label>
+                <input type="number" name="participant_total" value="1" min="0" placeholder="Total Number of Members if Group" required id="id_participant_total">
+            </p>
+            <input class='btn btn-dark' type='submit' value="Participate"/>
+            <a role="button" class="btn btn-danger" href="/home">Go Back to Homepage</a>
+        </form>
+    <script>
+      function ShowGroupTile(x)
+      {
+        if(x==0)
+        {
+            document.getElementById('showit').style.display='none';
+            document.getElementById('id_participant_total').value=1;
+        }
+        else
+        {
+            document.getElementById('showit').style.display='block';
+            document.myform.id_participant_total.value = '0';
+        }
+        return;
+      }
+      function Validations(){
+          var id=document.myform.eventId.value;
+          if(id<=0)
+          {
+              alert('Event ID cannot be negative neither 0')
+          }
+      }
+    </script>
+    </div>
+</span>
+{% endblock content %}
