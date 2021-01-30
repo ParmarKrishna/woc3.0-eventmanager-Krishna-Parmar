@@ -1,0 +1,23 @@
+{% extends "./base.html" %}
+{% block content %}
+<div class="participant-table">
+    <h2 class="pTable-header">Host Access</h2>
+    <table style="text-align: center;" class="main-table">
+        <tr class="row">
+            <th class="pname">Participant Name</th>
+            <th class="ptype">Participant Type</th>
+            <th class="ptppl">Total People</th>
+            <th class="pmnum">Mobile Number</th>
+        </tr>
+        {% for p in participants %}
+        <tr>
+            <td>{{ p.participant_name }}</td>
+            <td>{{ p.participant_type }}</td>
+            <td>{{ p.participant_total }}</td>
+            <td>{{ p.participant_mobileno }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a role="button"  href="{% url 'Event-Manager-Home' %}">Go Back to Homepage</a>
+</div>
+{% endblock %}
