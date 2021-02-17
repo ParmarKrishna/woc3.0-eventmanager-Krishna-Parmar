@@ -1,0 +1,44 @@
+{% extends "./base.html" %}
+{% block content %}
+{% ifequal id 1%}
+    <div class="alert" role="alert">
+        <span class="closebtn">&times;</span>
+        <strong>WOAH BUDDY!!</strong>No such event exists!!!
+    </div>
+{% endifequal %}
+{% ifequal pass 1%}
+    <div class="alert" role="alert">
+        <span class="closebtn">&times;</span>
+        <strong>HEY BRO!!</strong> Seems like wrong password, enter again.
+    </div>
+{% endifequal %}
+<div class="host-access">
+<h2 class="host-access-header">Host Access</h2>
+<form method="POST" name="AccessForm" onsubmit="return Validate()">
+    {% csrf_token %}
+    <p><label for="access_event">Event ID:  </label>   <input name="access_event" id="event_id" default=0 type="number"/><br></p>
+    <p><label for="acces_password">Host Password:</label>   <input type="password" name="access_password"/><br></p>
+    <p><input class="button" type="submit"></p>
+    <a role="button" href="{% url 'Event-Manager-Home' %}">Go Back to Homepage</a>
+</form>
+<script>
+    function Validate(){
+        if(document.getElementById('event_id').value==''){
+            confirm('You have not entered event ID. Please enter it.');
+            let ID=prompt('Enter Event ID:');
+            document.getElementById('event_id').value=ID;
+        }
+    }
+    var close = document.getElementsByClassName("closebtn");
+var i;
+
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function(){
+    var div = this.parentElement;
+    div.style.opacity = "0";
+    setTimeout(function(){ div.style.display = "none"; }, 600);
+  }
+}
+</script>
+</div>
+{% endblock %}

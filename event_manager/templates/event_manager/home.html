@@ -1,0 +1,19 @@
+{% extends "./base.html" %}
+{% block content %}
+<div class="mainblock">
+  <div class="content1">
+      manage
+      <br>
+      <br>
+      events
+  </div>
+  <div class="subcontent1">
+      your
+  </div>
+</div>
+<div class="HostButton">
+    <a class="hostmaintext" href="{% url 'Event-Manager-getlist' %}">host Access</a>
+    <p class="hostsubtext">If you have registered your event</p>
+</div>
+
+{% endblock content %}

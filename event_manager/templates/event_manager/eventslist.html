@@ -1,0 +1,16 @@
+{% extends "./base.html" %}
+{% block content %}
+{% for event in events %}
+<div class="maineventlist">
+    <div class="infobox">
+        <h2><b>{{ event.name }}</b></h2>
+        <h3>Event ID : {{ event.id }} </h3>
+        <div><p><b>Description :</b> {{ event.description }}</p>
+        <p><b>From :</b> {{ event.From|date:"F d Y, g a" }}</p>
+        <p><b>To :</b> {{ event.To|date:"F d Y, g a" }}</p>
+        <p><b>Location : </b>{{ event.location }}</p>
+        <div><p style="color:red"><b>Deadline to Register : </b><br>{{ event.deadline|date:"F d Y, g a" }}</p></div>
+    </div>
+</div>
+{% endfor %}
+{% endblock content %}

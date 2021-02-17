@@ -1,0 +1,44 @@
+{% extends "./base.html" %}
+{% block content %}
+{% ifequal k 1%}
+    <div role="alert" class="alert1">
+        <span class='closebtn'>&times;  </span>
+        <strong>OH NO!!</strong>This Email Address seems to be registered with another event, please use different Email Address
+    </div>
+{% endifequal %}
+<div class="eventreg-main-container">
+    <h2 class="eventreg-header">Event Registration:</h2>
+    <p class="eventreg-header-subtext">Your Email ID and Mobile Number will recieve confirmation about your registered event details.</p>
+    {% if form.non_field_errors %}
+        <div class="alert">
+            {{form.error}}
+        </div>
+    {% endif %}
+    <div class="eventreg-mainform">
+    <form name="PForm" method="POST" onsubmit="return Validations()">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type='submit' class="button" value="Register & host event"/><br>
+    <a role="button" href="{% url 'Event-Manager-Home' %}">Go Back to Homepage</a><br>
+    </form>
+    <script>
+    function Validations(){
+        var mobileno=document.PForm.host_mobileno.value;
+        if(mobileno<=0){
+            alert("You have entered wrong mobile number.")
+        }
+    }
+    var close = document.getElementsByClassName("closebtn");
+var i;
+
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function(){
+    var div = this.parentElement;
+    div.style.opacity = "0";
+    setTimeout(function(){ div.style.display = "none"; }, 600);
+  }
+}
+    </script>
+    </div>
+</div>
+{% endblock content %}

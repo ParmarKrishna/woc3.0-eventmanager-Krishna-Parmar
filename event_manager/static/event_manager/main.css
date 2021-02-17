@@ -1,0 +1,415 @@
+*{cursor: none;}
+body{
+background: #141313;
+height: 100%;
+width: 100%;
+font-family: "Monda",sans-serif;
+margin: 0;
+padding: 0;
+}
+.Circle{
+    position: fixed;
+    height: 500px;
+    width: 500px;
+    left: -200px;
+    top: -170px;
+    background: #F1DA09;
+    opacity: 0.15;
+    z-index: -1;
+    border-radius:50%;
+    }
+.Circle1{
+        position: fixed;
+        height: 300px;
+        width: 300px;
+        top: 750px;
+        left: -50px;
+        background: #F1DA09;
+        opacity: 0.15;
+        z-index: -1;
+        border-radius:55%;
+    }
+.maintopright{
+    position:fixed;
+    width: 508px;
+    height: 508px;
+    left: 1285px;
+    right:0px;
+    top: -150px;
+    z-index: -1;
+    background:linear-gradient(#FFF500,#141313);
+    /*filter: blur(4px);*/
+    transform: rotate(210deg);
+    border-radius: 50%;
+    opacity: 0.15;
+    }
+.content1{
+    position: absolute;
+width: 424px;
+height: 343px;
+left: 99px;
+top: 91px;
+font-style: normal;
+font-weight: normal;
+font-size: 100px;
+line-height: 100px;
+color: #ECDCDC;
+}
+.subcontent1{
+position: absolute;
+width: 347px;
+height: 100px;
+left: 99px;
+top: 195px;
+
+font-family: Libre Franklin;
+font-style: normal;
+font-weight: normal;
+font-size: 86px;
+line-height: 100px;
+color: #F1DA09;
+}
+.NavBar{
+    text-decoration: none;
+    padding-bottom: 0%;
+    list-style: none;
+    list-style-type: none;  
+    display: flex;
+}
+.NavBarItem1{
+    position: fixed;
+width: 301px;
+height: 98px;
+left: 71px;
+top: 800px;
+font-family: 'Monda',sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 25px;
+color: #F2E0E0;
+text-decoration: none;
+}
+/*
+a:hover{
+    color:yellow;
+}
+a:active{
+    color: blue;
+}*/
+.NavBarItem2{
+    position: fixed;
+width: 375px;
+height: 98px;
+left: 700px;
+top: 800px;
+font-family: 'Monda',sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 25px;
+color: #F2E0E0;
+text-decoration: none;
+/*
+height: 100px;
+width: 800px;
+background-color:#141313;
+border-radius: 2rem;*/
+}
+
+.NavBarItem3{
+    position: fixed;
+width: 212px;
+height: 98px;
+left: 1050px;
+top: 800px;
+font-family: 'Monda',sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 25px;
+color: #F2E0E0;
+text-decoration: none;
+}
+.NavBarItem4{
+    position: fixed;
+width: 364px;
+height: 98px;
+left: 1300px;
+top: 800px;
+font-family: 'Monda',sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 25px;
+text-decoration: none;
+color: #F2E0E0;
+}
+.hostmaintext{
+color: #ECDCDC;
+position: absolute;
+width: 312px;
+height: 84px;
+left: 1000px;
+top: 370px;
+font-family:'Monda',sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 40px;
+text-decoration: none;
+line-height: 100px;
+/* or 200% */
+}
+.hostsubtext{
+position: absolute;
+width: 480px;
+height: 86px;
+left: 985px;
+top: 400px;
+font-family: 'Monda',sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 100px;
+/* or 333% */
+color: #F1DA09;
+}
+.participantreg{
+    color: #ffffff;
+    font-family:'Monda',sans-serif;
+    font-style: normal;
+    font-weight: bold;
+}
+.participantreg .role{
+background-color: red;
+color:  #f1e9e9;
+}
+.participantreg .participantform .pformHeader{
+    font-family:'Monda',sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 40px;
+line-height: 100px;
+margin-left:650px;
+}
+.participantreg .participantform .pformHeaderSubtext{
+font-family:'Monda',sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+margin-top:0px;
+margin-left:450px;
+margin-right: 300px;
+color: black;
+background-color: yellow;
+}
+.participantreg .participantform .pmainform{
+    margin-left: 650px;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.participantreg .participantform .pmainform p{
+    font-size: 20px;
+}
+
+.participantreg .participantform .pmainform .button {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+    margin-bottom: 25px;
+  }
+  
+.participantreg .participantform .pmainform .button:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+.participantreg .participantform .pmainform .pformlink{
+    color:#F2E0E0;
+    text-decoration: none;
+  }
+
+.participantreg .participantform .pmainform .pformlink a:hover{
+    color:  #F1DA09;
+  }
+.participantreg .participantform .pmainform .pmainform a:active{
+    color: blue;
+}
+.eventreg-main-container{
+    display: inline-block;
+    text-align: center;
+    font-family: "Monda",sans-serif;
+    color:#F2E0E0;
+    position: absolute;
+    left : 20px;
+}
+.eventreg-header{
+    font-style: normal;
+font-weight: bold;
+font-size: 40px;
+line-height: 100px;
+margin-left:130px;
+}
+.eventreg-header-subtext{
+    font-family:'Monda',sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+margin-top:0px;
+margin-left:450px;
+margin-right: 300px;
+color: black;
+background-color: yellow;
+}
+.eventreg-main-container .eventreg-mainform .button{
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+    margin-bottom: 25px;
+}
+.eventreg-main-container .eventreg-mainform .button:hover{
+    background-color: #008CBA;
+    color: white;
+}
+.eventreg-main-container .eventreg-mainform a{
+    color:#F2E0E0;
+    text-decoration: none;
+}
+.eventreg-main-container .eventreg-mainform a:hover{
+    color:yellow;
+    text-decoration: none;
+}
+.eventreg-main-container input{
+    border-radius: 2rem;
+}
+.host-access{
+    top:200px;
+    text-align: center;
+    font-family: "Monda",sans-serif;
+    color:#F2E0E0;
+    position: absolute;
+    left : 700px;
+}
+.host-access-header{
+    font-size: 50px;
+}
+.alert{
+    margin-left: 700px;
+    margin-right: 700px;
+    margin-top: 140px;
+    color:red;
+    background-color:yellow;
+}
+.alert1{
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 30px;
+    color:red;
+    background-color:yellow;
+}
+.closebtn {
+    margin-left: 15px;
+    color:red;
+    font-weight: bold;
+    float: right;
+    font-size: 40px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+.host-access .button{
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+    margin-bottom: 25px;
+}
+.host-access .button:hover{
+    background-color: #008CBA;
+    color: white;
+}
+.host-access a{
+    color:#F2E0E0;
+    text-decoration: none;
+}
+.host-access a:hover{
+    color:yellow;
+    text-decoration: none;
+}
+
+.participant-table{
+    display: inline-block;
+    text-align: center;
+    font-family: "Monda",sans-serif;
+    color:#F2E0E0;
+    position: absolute;
+    left : 600px;
+}
+.pTable-header{
+    font-size: 50px;
+}
+.main-table{
+    margin-top: 50px;
+}
+
+.participant-table a{
+    color:#F2E0E0;
+    text-decoration: none;
+}
+.participant-table a:hover{
+    color:yellow;
+    text-decoration: none;
+}
+.participant-table table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+.participant-table  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+.participant-table  tr:nth-child(even) {
+    background-color:rgb(10, 10, 1);
+  }
+.maineventlist{
+    font-family: "Monda",sans-serif;
+    color:#F2E0E0;
+}
+.maineventlist .infobox{
+    display: inline-block;
+    height: 100%;
+    width: 750px;
+    margin-top: -20px;
+    margin-left: 30%;
+    padding: auto;
+    margin-bottom: 100px;
+    background-color:rgba(192,192,192,0.3);
+    z-index: 1;
+    text-align: center;
+    place-items: center;
+    grid-auto-flow: column;
+}
+.fancyCursor{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    position: absolute;
+    background: black;
+    transition: all 0.3s ease;
+    transition-property: background,transform;
+    transform-origin: 100% 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+.link-grow{
+    transform: scale(2);
+    background:yellow;
+    opacity: 0.3;
+}
+.hoverd-link{
+    color: yellow;
+}
+
